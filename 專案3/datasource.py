@@ -1,6 +1,6 @@
 import requests
 
-api_key = "75f99c6e5bf613675e743a9c3ab32009"
+
 
 tw_county_names = {"台北":"Taipei",
                    "台中":"Taichung",
@@ -23,8 +23,8 @@ tw_county_names = {"台北":"Taipei",
                    "澎湖":"Penghu",
                    "連江":"Lienchiang"
                    }
-                   
-def get_forecast_data(cityName):
+
+def get_forecast_data(cityName, api_key):
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={cityName},tw&APPID={api_key}&lang=zh_tw&units=metric"
 
     response = requests.get(url=url)
