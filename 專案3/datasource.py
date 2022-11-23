@@ -1,7 +1,5 @@
 import requests
 
-
-
 tw_county_names = {"台北":"Taipei",
                    "台中":"Taichung",
                    "基隆":"Keelung",
@@ -33,4 +31,4 @@ def get_forecast_data(cityName, api_key):
         print("下載成功")
         return response.json()['list']
     else:
-        print("下載失敗")
+        raise Exception(f"{cityName}下載失數")
