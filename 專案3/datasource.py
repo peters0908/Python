@@ -36,4 +36,4 @@ def get_forecast_data(cityName, api_key):
         return county_forecast
 
     else:
-        raise Exception(f"{cityName}下載失數")
+        raise Exception(f"{cityName}下載失敗")
